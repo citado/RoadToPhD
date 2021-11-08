@@ -1,0 +1,189 @@
+% !TeX TS-program = xelatex
+
+\documentclass[dvipsnames]{beamer}
+\usetheme{metropolis}
+
+\usepackage{multicol}
+
+\usepackage{ragged2e} % who justifies the text
+\usepackage{xecolor}
+\usepackage{amsmath}
+%\usefonttheme[onlymath]{serif} %Change the math font
+
+\usepackage{tabularx}
+\usepackage{booktabs}
+\usepackage[style=numeric,sorting=ynt]{biblatex}
+\addbibresource{references.bib}
+\usepackage[localise]{xepersian}
+\settextfont{Vazir}
+\setlatintextfont{Roboto}
+
+%---------------------------------------------------------------------------------
+% Settings to force Beamer works with Xepersian and RTL typesetting
+%---------------------------------------------------------------------------------
+%\raggedleft
+
+% For right to left lists (itemize and enumerate)
+\makeatletter
+\newcommand{\لیست‌فارسی}{\raggedleft\rightskip\@totalleftmargin}
+\makeatother
+% Correct the bullet for RTL texts
+\setbeamertemplate{itemize item}{\scriptsize\raise1.25pt%
+ \hbox{\donotcoloroutermaths$\blacktriangleleft$}} 
+
+% To force beamer use numbering in captions
+\setbeamertemplate{caption}[numbered]{}% Number float-like environments
+
+\setbeamertemplate{footline}[frame number]
+\setbeamertemplate{section in toc}[circle]
+\setbeamertemplate{blocks}[rounded][shadow=true]
+\setbeamercolor{block body}{bg=lightgray}
+\setbeamercolor{headline}{bg=orange}
+\setbeamersize{text margin left=1cm,text margin right=1cm}
+
+\setbeamertemplate{headline}
+{
+		\begin{beamercolorbox}{section in head/foot}
+				\vspace{2pt}\insertnavigation{\paperwidth}\vspace{2pt}
+		\end{beamercolorbox}
+}
+
+%---------------------------------------------------------------------------------
+% To force beamer use numbering in captions
+\setbeamertemplate{caption}[numbered]{}% Number float-like environments
+
+\setbeamertemplate{footline}
+{%
+	\leavevmode%
+	\hbox{%
+		\begin{beamercolorbox}[wd=.333333\paperwidth,ht=2.25ex,dp=1ex,center]{author in head/foot}%
+			\usebeamerfont{author in head/foot}\insertshortauthor%
+		\end{beamercolorbox}%
+		\begin{beamercolorbox}[wd=.333333\paperwidth,ht=2.25ex,dp=1ex,center]{title in head/foot}%
+			\usebeamerfont{title in head/foot}\insertshorttitle%
+		\end{beamercolorbox}%
+		\begin{beamercolorbox}[wd=.333333\paperwidth,ht=2.25ex,dp=1ex,right]{date in head/foot}%
+			\usebeamerfont{date in head/foot}\insertsection\hspace*{2em}
+			\insertframenumber~ از \inserttotalframenumber{} \hspace*{2ex}%
+		\end{beamercolorbox}
+	}%
+}
+\setbeamertemplate{section in toc}[circle]
+\setbeamertemplate{blocks}[rounded][shadow=true]
+\setbeamercolor{block title}{bg=orange}
+\setbeamercolor{block body}{bg=lightgray}
+\setbeamersize{text margin left=1cm,text margin right=1cm}
+\setbeamertemplate{frametitle continuation}{\insertcontinuationcount}
+
+%---------------------------------------------------------------------------------
+\title{ارزیابی کارآیی شبکه‌های توان پایین}
+\subtitle{}
+\author{پرهام الوانی}
+\institute{%
+		دانشکده مهندسی کامپیوتر\\
+		دکتر مهدی راستی
+}
+\date{\today}
+\titlegraphic{\vspace{4.5cm}\flushleft\includegraphics[height=50pt]{images/logo}}
+
+\begin{document}
+
+\makeatletter
+
+\setbeamertemplate{title}{%
+	\linespread{1.0}%
+	\inserttitle%
+	\par%
+	\vspace*{0.5em}
+}
+\setbeamertemplate{subtitle}{%
+	\insertsubtitle%
+	\par%
+	\vspace*{0.5em}
+}
+
+\AtBeginSection[]
+{%
+	\begin{frame}{فهرست}
+		\tableofcontents[currentsection]
+	\end{frame}
+	\begin{frame}
+		\begin{center}
+			\insertsectionnumber. \insertsection%
+		\end{center}
+		\usebeamertemplate*{title separator}
+	\end{frame}
+}
+
+\makeatother
+
+
+\begin{persian}
+	%------------------------------------------
+	% Title frame (0)
+	%------------------------------------------
+	{%
+		\setbeamertemplate{footline}{}
+		\begin{frame}
+			\titlepage%
+		\end{frame}
+	}
+
+	%-------------------------------------------------------------------------------
+	\begin{frame}{فهرست}
+		\tableofcontents[pausesections]
+	\end{frame}
+
+	%-------------------------------------------------------------------------------
+	\section{شبکه‌های \متن‌لاتین{LoRa}}
+
+	\section{کارهای مرتبط}
+	\begin{frame}{}
+		\begin{table}[h]
+			\caption{مرور پژوهش‌های حوزه ارزیابی کارایی شبکه‌های توان پایین}
+			\vspace{0.3cm}
+			\begin{tabularx}{\textwidth}{XXXXX}
+				\toprule
+				مرجع &
+				تحرک &
+				\متن‌لاتین{coverage} &
+				شبکه &
+				لایه انتقال &
+				لایه اپلیکشن &
+				اندازه بسته &
+				\متن‌لاتین{Coding Rate} \\
+				\midrule
+				\midrule
+				\cite{sensors-18-00772-v3} &
+				سیار &
+				گزارش شده &
+				\متن‌لاتین{LoRaWAN} &
+				ندارد &
+				ندارد &
+				گزارش شده &
+			  	گزارش شده \\
+				\midrule
+				\bottomrule
+			\end{tabularx}
+		\end{table}
+	\end{frame}
+
+
+	\begin{frame}{\cite{sensors-18-00772-v3}}
+	  \شروع{فقرات}
+	  \لیست‌فارسی
+	  \فقره یک نود متحرک که پارامترهای ارسالش با زمان تغییر می‌کند.
+	  \فقره ناحیه‌های شهری، نیمه‌شهری و غیرشهری
+	  \فقره ارزیابی رادیویی بر پایه مدل انتشار \متن‌لاتین{Okumura-Hata} پیش از انجام ارزیابی عملیاتی
+	  \پایان{فقرات}
+	\end{frame}
+
+	%-------------------------------------------------------------------------------
+	\begin{frame}[allowframebreaks]{مراجع}
+		\begin{latin}
+		\printbibliography[title=مراجع]
+		\end{latin}
+	\end{frame}
+
+\end{persian}
+\end{document}
