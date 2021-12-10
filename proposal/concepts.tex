@@ -22,6 +22,64 @@
 به همین دلیل و از سوی دیگر باز بودن استاندارد، \متن‌لاتین{LoRaWAN} توجه جامعه محققان را از اولین نمود خود در بازار جلب کرده است.
 \مرجع{sensors-18-03995}
 
+\begin{table}
+\caption{مقایسه تکنولوژی‌های \متن‌لاتین{LPWAN} \مرجع{SanchezIborra2016}}
+\begin{latin}\begin{tabularx}
+  {\textwidth}
+  {|*{6}{X|}}
+  \toprule
+  &
+  LoRaWAN &
+  Sigfox &
+  NB-IoT &
+  Ingenu &
+  Telensa \\
+  \midrule
+  Band &
+  433/868/ 780/915 MHz &
+  868/915 MHz &
+  Cellular &
+  2.4 GHz &
+  Sub-GHz \\
+  \midrule
+  Data Rate &
+  50 kbps &
+  100 bps &
+  200 kbps &
+  19 kbps &
+  346 Mbps \\
+  \midrule
+  Range &
+  5 km &
+  10 km &
+  35 km &
+  15 km &
+  1 km \\
+  \midrule
+  Number of Channels &
+  6 &
+  333 &
+  --- &
+  --- &
+  --- \\
+  \midrule
+  MAC &
+  ALOHA &
+  none &
+  Non-Access Stratum &
+  --- &
+  --- \\
+  \midrule
+  Topology &
+  Star &
+  Star &
+  Star &
+  --- &
+  --- \\
+  \bottomrule
+\end{tabularx}\end{latin}
+\end{table}
+
 از سال ۲۰۱۵ جامعه تحقیقاتی شروع به مطالعه در رابطه با کارآیی و ویژگی‌های مختلف تکنولوژی‌های \متن‌لاتین{LoRa} و \متن‌لاتین{LoRaWAN} کرد.
 از آن تاریخ مقلات متعددی در ژورنال‌ها و کنفرانس‌های عملی در سراسر دنیا چاپ و ارائه شده‌اند.
 \مرجع{sensors-18-03995}
@@ -241,4 +299,10 @@
 \]
 \[
   f_{1} \otimes f_{2} = f_{2} \otimes f_{1}
+\]
+
+با توجه به این تعریف می‌توان گفت $\alpha$ یک منحنی ورودی برای $R$ خواهد بود اگر و تنها اگر
+
+\[
+  R \le R \otimes \alpha
 \]
