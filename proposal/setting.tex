@@ -66,8 +66,21 @@
 \usepackage[localise]{xepersian}%[extrafootnotefeatures]
 \SepMark{-}
 %حتماً از تک لایو 2014 استفاده کنید.
-\settextfont[Scale=1.4,Path=fonts/]{BNazanin}
-%\setlatintextfont{Times New Roman}
+\settextfont[
+  Scale = 1.2,
+  Path = fonts/,
+  UprightFont = *-Regular,
+  BoldFont = *-Bold,
+  ItalicFont = *-Variable
+]{Vazir}
+
+\setlatintextfont[
+  Path = fonts/,
+  UprightFont = *-Regular,
+  BoldFont = *-Bold,
+  ItalicFont = *-Italic
+]{Neuton}
+
 \renewcommand{\baselinestretch}{1.5}
 \renewcommand{\labelitemi}{$\bullet$}
 %%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -77,7 +90,13 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%
 % تعریف قلم‌های فارسی اضافی برای استفاده در بعضی از قسمت‌های متن
 \defpersianfont\nastaliq[Scale=2,Path=fonts/]{IranNastaliq}
-\defpersianfont\chapternumber[Scale=3,Path=fonts/]{BNazanin}
+\defpersianfont\chapternumber[
+  Scale=3,
+  Path=fonts/,
+  UprightFont = *-Regular,
+  BoldFont = *-Bold,
+  ItalicFont = *-Variable
+]{Vazir}
 %%%%%%%%%%%%%%%%%%%%%%%%%%
 % دستوری برای تغییر نام کلمه «اثبات» به «برهان»
 \renewcommand\proofname{\textbf{برهان}}
