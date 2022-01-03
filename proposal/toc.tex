@@ -1,0 +1,22 @@
+\cleardoublepage
+\thispagestyle{table-of-contents}
+\tableofcontents
+\cleardoublepage
+
+%اگر لیست تصاویر و لیست جداول ندارید ، کدهای زیر را با گذاشتن % در ابتدای آنها، غیرفعال کنید.
+\BeginNoToc
+\addtocontents{lof}{\lofheading}% add heading to the first page in LoF
+\thispagestyle{list-of-figures}
+\listoffigures
+\cleardoublepage
+
+\addtocontents{lot}{\lotheading}% add heading to the first page in LoT
+\thispagestyle{list-of-tables}
+\listoftables
+\cleardoublepage
+
+\setcounter{savepage}{\arabic{page}}
+\mainmatter
+% add heading to the first page in ToC, after frontmatter entries
+\addtocontents{toc}{\tocheading}
+\EndNoToc
