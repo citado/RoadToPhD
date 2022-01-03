@@ -1,20 +1,10 @@
-\documentclass{report}
+\documentclass[oneside,phd]{aut-thesis}
 
-\usepackage{graphicx}
-\usepackage{tabularx}
-% rotating the related works table
-\usepackage{rotating}
-% midrule, toprule and bottomrule for tables
-\usepackage{booktabs}
-% align environment
-\usepackage{amsmath}
-\usepackage[top=30mm, bottom=30mm, left=25mm, right=30mm]{geometry}
-\usepackage[localise]{xepersian}
-
-\settextfont[Scale=1.2]{Vazir}
-\renewcommand{\baselinestretch}{1.5}
+\input{setting}
 
 \begin{document}
+
+\input{title-fa}
 
 \include{introduction}
 \include{concepts}
@@ -24,5 +14,7 @@
 \setLTRbibitems{}
 \bibliographystyle{ieeetr}
 \bibliography{references.bib}
+
+\input{title-en}
 
 \end{document}
