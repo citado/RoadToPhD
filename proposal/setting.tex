@@ -168,7 +168,7 @@
  \else\raggedright%
  \fi}
 \def\@makechapterhead#1{%
-\thispagestyle{style1}
+\thispagestyle{main}
 \vspace*{20\p@}%
 {\parindent \z@ \mycustomraggedright %\@mycustomfont
 \ifnum \c@secnumdepth >\m@ne
@@ -194,7 +194,7 @@
 \pagestyle{fancy}
 \renewcommand{\chaptermark}[1]{\markboth{\chaptername~\tartibi{chapter}: #1}{}}
 
-\fancypagestyle{style1}{
+\fancypagestyle{main}{
 \fancyhf{}
 \fancyfoot[c]{\thepage}
 \fancyhead[R]{\leftmark}%
@@ -202,7 +202,7 @@
 }
 
 
-\fancypagestyle{style2}{
+\fancypagestyle{abstract}{
 \fancyhf{}
 \fancyhead[R]{چکیده}
 \fancyfoot[C]{\thepage{}}
@@ -216,40 +216,41 @@
   \renewcommand{\headrulewidth}{1.2pt}%
 }
 
-\fancypagestyle{style4}{%
+\fancypagestyle{list-of-tables}{%
   \fancyhf{}%
   \fancyhead[R]{فهرست جداول}
   \fancyfoot[C]{\thepage}%
   \renewcommand{\headrulewidth}{1.2pt}%
 }
 
-\fancypagestyle{style5}{%
+\fancypagestyle{list-of-figures}{%
   \fancyhf{}%
   \fancyhead[R]{فهرست اشکال}
   \fancyfoot[C]{\thepage}%
   \renewcommand{\headrulewidth}{1.2pt}%
 }
 
-\fancypagestyle{style6}{%
+\fancypagestyle{table-of-contents}{%
   \fancyhf{}%
   \fancyhead[R]{فهرست مطالب}
   \fancyfoot[C]{\thepage}%
   \renewcommand{\headrulewidth}{1.2pt}%
 }
 
-\fancypagestyle{style7}{%
+\fancypagestyle{index}{%
   \fancyhf{}%
   \fancyhead[R]{نمایه}
   \fancyfoot[C]{\thepage}%
   \renewcommand{\headrulewidth}{1.2pt}%
 }
 
-\fancypagestyle{style8}{%
+\fancypagestyle{references}{%
   \fancyhf{}%
   \fancyhead[R]{منابع و مراجع}
   \fancyfoot[C]{\thepage}%
   \renewcommand{\headrulewidth}{1.2pt}%
 }
+
 \fancypagestyle{style9}{%
   \fancyhf{}%
   \fancyhead[R]{واژه‌نامه‌ی فارسی به انگلیسی}
@@ -277,5 +278,3 @@
 \renewcommand{\listfigurename}{فهرست اشکال}
 \renewcommand{\listtablename}{فهرست جداول}
 %\renewcommand\cftsecleader{\cftdotfill{\cftdotsep}}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%
