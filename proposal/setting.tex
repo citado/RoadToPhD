@@ -194,73 +194,82 @@
 \pagestyle{fancy}
 \renewcommand{\chaptermark}[1]{\markboth{\chaptername~\tartibi{chapter}: #1}{}}
 
-\fancypagestyle{main}{
+\fancypagestyle{main}{%
   \fancyhf{}
   \fancyfoot[c]{\thepage}
-  \fancyhead[R]{\leftmark}%
+  \fancyhead[R]{\leftmark}
   \renewcommand{\headrulewidth}{1.2pt}
+  \setlength{\headheight}{13pt}
 }
 
 \fancypagestyle{version}{
   \fancyhf{}
-  \fancyfoot[C]{\thepage{}}
+  \fancyfoot[C]{\thepage}
   \renewcommand{\headrulewidth}{0pt}
 }
 
 \fancypagestyle{abstract}{
-\fancyhf{}
-\fancyhead[R]{چکیده}
-\fancyfoot[C]{\thepage{}}
-\renewcommand{\headrulewidth}{1.2pt}
+  \fancyhf{}
+  \fancyhead[R]{چکیده}
+  \fancyfoot[C]{\thepage}
+  \renewcommand{\headrulewidth}{1.2pt}
+  \setlength{\headheight}{13pt}
 }
 
 \fancypagestyle{style3}{%
   \fancyhf{}%
   \fancyhead[R]{فهرست نمادها}
-  \fancyfoot[C]{\thepage}%
-  \renewcommand{\headrulewidth}{1.2pt}%
+  \fancyfoot[C]{\thepage}
+  \renewcommand{\headrulewidth}{1.2pt}
+  \setlength{\headheight}{13pt}
 }
 
 \fancypagestyle{list-of-tables}{%
-  \fancyhf{}%
+  \fancyhf{}
   \fancyhead[R]{فهرست جداول}
-  \fancyfoot[C]{\thepage}%
-  \renewcommand{\headrulewidth}{1.2pt}%
+  \fancyfoot[C]{\thepage}
+  \renewcommand{\headrulewidth}{1.2pt}
+  \setlength{\headheight}{13pt}
 }
 
-\fancypagestyle{list-of-figures}{%
-  \fancyhf{}%
+\fancypagestyle{list-of-figures}{
+  \fancyhf{}
   \fancyhead[R]{فهرست اشکال}
-  \fancyfoot[C]{\thepage}%
-  \renewcommand{\headrulewidth}{1.2pt}%
+  \fancyfoot[C]{\thepage}
+  \renewcommand{\headrulewidth}{1.2pt}
+  \setlength{\headheight}{13pt}
 }
 
-\fancypagestyle{table-of-contents}{%
-  \fancyhf{}%
+\fancypagestyle{table-of-contents}{
+  \fancyhf{}
   \fancyhead[R]{فهرست مطالب}
-  \fancyfoot[C]{\thepage}%
-  \renewcommand{\headrulewidth}{1.2pt}%
+  \fancyfoot[C]{\thepage}
+  \renewcommand{\headrulewidth}{1.2pt}
+  \setlength{\headheight}{13pt}
 }
 
-\fancypagestyle{index}{%
-  \fancyhf{}%
+\fancypagestyle{index}{
+  \fancyhf{}
   \fancyhead[R]{نمایه}
-  \fancyfoot[C]{\thepage}%
-  \renewcommand{\headrulewidth}{1.2pt}%
+  \fancyfoot[C]{\thepage}
+  \renewcommand{\headrulewidth}{1.2pt}
+  \setlength{\headheight}{13pt}
 }
 
-\fancypagestyle{references}{%
-  \fancyhf{}%
+\fancypagestyle{references}{
+  \fancyhf{}
   \fancyhead[R]{منابع و مراجع}
-  \fancyfoot[C]{\thepage}%
-  \renewcommand{\headrulewidth}{1.2pt}%
+  \fancyfoot[C]{\thepage}
+  \renewcommand{\headrulewidth}{1.2pt}
+  \setlength{\headheight}{13pt}
 }
 
-\fancypagestyle{style9}{%
-  \fancyhf{}%
+\fancypagestyle{style9}{
+  \fancyhf{}
   \fancyhead[R]{واژه‌نامه‌ی فارسی به انگلیسی}
-  \fancyfoot[C]{\thepage}%
-  \renewcommand{\headrulewidth}{1.2pt}%
+  \fancyfoot[C]{\thepage}
+  \renewcommand{\headrulewidth}{1.2pt}
+  \setlength{\headheight}{13pt}
 }
 %
 
