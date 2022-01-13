@@ -16,12 +16,13 @@ PhD proposal on the end to end performance evaluation of LoRaWAN network includi
 
 ## Meetings
 
-| Location          |    Date    |
-| :---------------- | :--------: |
-| Dr. Rasti Meeting | 2021-11-02 |
-| Dr. Rasti Meeting | 2021-11-07 |
-| Dr. Rasti Meeting | 2021-11-16 |
-| Dr. Rasti Meeting | 2022-01-03 |
+| Location                        |    Date    |
+| :------------------------------ | :--------: |
+| Dr. Rasti Meeting               | 2021-11-02 |
+| Dr. Rasti Meeting               | 2021-11-07 |
+| Dr. Rasti Meeting               | 2021-11-16 |
+| Dr. Rasti Meeting               | 2022-01-03 |
+| Dr. Rasti / Dr. Bakhshi Meeting | 2022-01-15 |
 
 ## Latex Requirements for Proposal
 
