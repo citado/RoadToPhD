@@ -195,12 +195,17 @@
 \renewcommand{\chaptermark}[1]{\markboth{\chaptername~\tartibi{chapter}: #1}{}}
 
 \fancypagestyle{main}{
-\fancyhf{}
-\fancyfoot[c]{\thepage}
-\fancyhead[R]{\leftmark}%
-\renewcommand{\headrulewidth}{1.2pt}
+  \fancyhf{}
+  \fancyfoot[c]{\thepage}
+  \fancyhead[R]{\leftmark}%
+  \renewcommand{\headrulewidth}{1.2pt}
 }
 
+\fancypagestyle{version}{
+  \fancyhf{}
+  \fancyfoot[C]{\thepage{}}
+  \renewcommand{\headrulewidth}{0pt}
+}
 
 \fancypagestyle{abstract}{
 \fancyhf{}
@@ -258,7 +263,6 @@
   \renewcommand{\headrulewidth}{1.2pt}%
 }
 %
-
 
 %دستور حذف نام لیست تصاویر و لیست جداول از فهرست مطالب
 \newcommand*{\BeginNoToc}{%
