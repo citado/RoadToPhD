@@ -55,9 +55,19 @@
 \newif\if@bscthesis
 \@bscthesisfalse
 \DeclareOption{bsc}{\@bscthesistrue}
+
 \newif\if@mscthesis
 \@mscthesisfalse
 \DeclareOption{msc}{\@mscthesistrue}
+
+\newif\if@phdthesis
+\@phdthesisfalse
+\DeclareOption{phd}{\@phdthesistrue}
+
+\newif\if@proposal
+\@proposalfalse
+\DeclareOption{proposal}{\@proposaltrue}
+
 \ProcessOptions
 %%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -70,24 +80,39 @@
 \vspace{-1cm}\fontsize{14pt}{15pt}\selectfont(پلی‌تکنیک تهران)\par
 \vspace{-1cm}\fontsize{16pt}{17pt}\selectfont\@faculty}\par
 %\vskip 1.5cm
-{\fontsize{16pt}{14pt}\selectfont\bfseries
-\if@mscthesis
-پایان‌نامه کارشناسی ارشد
-\vspace{-.8cm}
+{
+  \fontsize{16pt}{14pt}\selectfont\bfseries
 
-\@department
-\else
-\if@bscthesis
-پروژه کارشناسی
-\vspace{-.8cm}
+  \if@mscthesis
+    \if@proposal
+    پیشنهاد پروژه کارشناسی ارشد
+    \else
+    پایان‌نامه کارشناسی ارشد
+    \fi
+    \vspace{-.8cm}
 
-\@department
-\else
-رساله دکتری
-\vspace{-.8cm}
+    \@department
+  \fi
+  \if@bscthesis
+    \if@proposal
+    پیشنهاد پروژه کارشناسی
+    \else
+    پروژه کارشناسی
+    \fi
+    \vspace{-.8cm}
 
-\@department
-\fi\fi
+    \@department
+  \fi
+  \if@phdthesis
+    \if@proposal
+    پیشنهاد رساله دکتری
+    \else
+    رساله دکتری
+    \fi
+    \vspace{-.8cm}
+
+    \@department
+  \fi
 }
 
 % {\fontsize{16pt}{17pt}\selectfont\bfseries%
