@@ -23,24 +23,26 @@
 % بسته‌ و دستوراتی برای ایجاد لینک‌های رنگی با امکان جهش
 \usepackage[pagebackref=false,colorlinks,linkcolor=blue,citecolor=red]{hyperref}
 \usepackage[nameinlink]{cleveref}%capitalize,,noabbrev
- \AtBeginDocument{%
-    \crefname{equation}{برابری}{equations}%
-    \crefname{chapter}{فصل}{chapters}%
-    \crefname{section}{بخش}{sections}%
-    \crefname{appendix}{پیوست}{appendices}%
-    \crefname{enumi}{مورد}{items}%
-    \crefname{footnote}{زیرنویس}{footnotes}%
-    \crefname{figure}{شکل}{figures}%
-    \crefname{table}{جدول}{tables}%
-    \crefname{theorem}{قضیه}{theorems}%
-    \crefname{lemma}{لم}{lemmas}%
-    \crefname{corollary}{نتیجه}{corollaries}%
-    \crefname{proposition}{گزاره}{propositions}%
-    \crefname{definition}{تعریف}{definitions}%
-    \crefname{result}{نتیجه}{results}%
-    \crefname{example}{مثال}{examples}%
-    \crefname{remark}{نکته}{remarks}%
-    \crefname{note}{یادداشت}{notes}%
+
+\AtBeginDocument{%
+  \crefname{equation}{برابری}{equations}%
+  \crefname{chapter}{فصل}{chapters}%
+  \crefname{section}{بخش}{sections}%
+  \crefname{appendix}{پیوست}{appendices}%
+  \crefname{enumi}{مورد}{items}%
+  \crefname{footnote}{زیرنویس}{footnotes}%
+  \crefname{figure}{شکل}{figures}%
+  \crefname{table}{جدول}{tables}%
+  \crefname{theorem}{قضیه}{theorems}%
+  \crefname{lemma}{لم}{lemmas}%
+  \crefname{corollary}{نتیجه}{corollaries}%
+  \crefname{proposition}{گزاره}{propositions}%
+  \crefname{definition}{تعریف}{definitions}%
+  \crefname{result}{نتیجه}{results}%
+  \crefname{example}{مثال}{examples}%
+  \crefname{remark}{نکته}{remarks}%
+  \crefname{note}{یادداشت}{notes}%
+  \setlength{\headheight}{13pt}
 }
 % چنانچه قصد پرینت گرفتن نوشته خود را دارید، خط بالا را غیرفعال و  از دستور زیر استفاده کنید چون در صورت استفاده از دستور زیر‌‌،
 % لینک‌ها به رنگ سیاه ظاهر خواهند شد که برای پرینت گرفتن، مناسب‌تر است
@@ -192,8 +194,6 @@
 
 \pagestyle{fancy}
 \renewcommand{\chaptermark}[1]{\markboth{\chaptername~\tartibi{chapter}: #1}{}}
-
-\setlength{\headheight}{13pt}
 
 \fancypagestyle{main}{%
   \fancyhf{}
