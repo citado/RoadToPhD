@@ -36,5 +36,5 @@ library to write persian in latex.
 The following packages are required to build the proposal:
 
 ```sh
-tlmgr install koma-script titlesec tocloft multirow enumitem cleveref tocbibind xypic
+tlmgr install koma-script titlesec tocloft multirow enumitem cleveref tocbibind xypic datatool
 ```
