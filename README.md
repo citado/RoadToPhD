@@ -1,10 +1,12 @@
-# PhD Proposal
+# Ph.D. Proposal
 
-## Introduction
+LoRa Network End-to-End Performance Evaluation / Winter 2022 / Dr.Bakhshi, Dr.Rasti
 
-PhD proposal on the end to end performance evaluation of LoRaWAN network including platform. network server and applications.
+## Introduction 👋
 
-## Literature Sources
+Ph.D. proposal on the end to end performance evaluation of LoRa/LoRaWAN network including platform, network server and applications.
+
+## Literature Sources 📚
 
 - [Google Scholar](https://scholar.google.com/)
 - [MDPI](https://www.mdpi.com/)
@@ -14,7 +16,7 @@ PhD proposal on the end to end performance evaluation of LoRaWAN network includi
 - [Wiley Online Library](https://onlinelibrary.wiley.com/)
 - [Springer](https://link.springer.com/)
 
-## Meetings
+## Meetings 🤝
 
 | Location                        |    Date    |
 | :------------------------------ | :--------: |
@@ -24,7 +26,14 @@ PhD proposal on the end to end performance evaluation of LoRaWAN network includi
 | Dr. Rasti Meeting               | 2022-01-03 |
 | Dr. Rasti / Dr. Bakhshi Meeting | 2022-01-15 |
 
-## Latex Requirements for Proposal
+## Latex 📜
+
+Both proposal and the presentation written in latex with [xepersian](https://github.com/persiantex/xepersian) which is great
+library to write persian in latex.
+
+### Requirements
+
+The following packages are required to build the proposal:
 
 ```sh
 tlmgr install koma-script titlesec tocloft multirow enumitem cleveref tocbibind xypic
