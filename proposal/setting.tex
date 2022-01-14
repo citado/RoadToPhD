@@ -7,9 +7,6 @@
 % بسته‌‌ای برای ظاهر شدن شکل‌ها و تصاویر متن
 \usepackage{graphicx}
 \usepackage{color}
-%بسته‌ای برای تنظیم فاصله عمودی خط‌های متن
-\usepackage{setspace}
-\setstretch{1.3}
 \usepackage{titleps}
 \usepackage{titletoc}
 \usepackage{tocloft}
@@ -17,8 +14,6 @@
 \usepackage{tabularx}
 \usepackage{datatool}
 \usepackage{booktabs}
-%با فعال کردن بسته زیر فوت‌نوت‌ها در هر صفحه ریست می‌شوند. حالت پیش‌فرض آن ریست شدن در هر فصل می‌باشد.
-%\usepackage[perpage]{footmisc}
 \usepackage{enumitem}
 %\usepackage{titlesec}
 % بسته‌ و دستوراتی برای ایجاد لینک‌های رنگی با امکان جهش
@@ -65,11 +60,14 @@
 \makeindex
 % \usepackage{sectsty}
 % فراخوانی بسته زی‌پرشین و تعریف قلم فارسی و انگلیسی
-\usepackage[localise]{xepersian}%[extrafootnotefeatures]
+\usepackage[%
+  localise,%
+  fontsize={10,12},%
+  % perpagefootnote=on,%
+]{xepersian}
 \SepMark{-}
 %حتماً از تک لایو 2014 استفاده کنید.
 \settextfont[
-  Scale = 1.2,
   Path = fonts/,
   UprightFont = *-Regular,
   BoldFont = *-Bold,
@@ -86,9 +84,7 @@
 \renewcommand{\baselinestretch}{1.5}
 \renewcommand{\labelitemi}{$\bullet$}
 %%%%%%%%%%%%%%%%%%%%%%%%%%
-% چنانچه می‌خواهید اعداد در فرمول‌ها، انگلیسی باشد، خط زیر را غیرفعال کنید.
-%در غیر اینصورت حتماً فونت PGaramond را نصب کنید.
-%\setdigitfont[Scale=1.1]{PGaramond}%%Yas
+%\setmathdigitfont{IRXLotus}[Scale=1.1]
 %%%%%%%%%%%%%%%%%%%%%%%%%%
 % تعریف قلم‌های فارسی اضافی برای استفاده در بعضی از قسمت‌های متن
 \defpersianfont\nastaliq[Scale=2,Path=fonts/]{IranNastaliq}
