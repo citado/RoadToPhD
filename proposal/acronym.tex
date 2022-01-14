@@ -1,0 +1,58 @@
+\chapter*{فهرست اختصارات}
+
+\addcontentsline{toc}{chapter}{فهرست اختصارات}
+
+% acronym command
+\newcommand{\acronym}[2]{
+  \DTLnewrow{acrdb}%
+  \DTLnewdbentry{acrdb}{acronym}{#1}%
+  \DTLnewdbentry{acrdb}{description}{#2}%
+}
+
+\newenvironment{acronyms}{%
+  \DTLifdbexists{acrdb}{\DTLcleardb{acrdb}}{\DTLnewdb{acrdb}}%
+}{%
+  \DTLsort{acronym}{acrdb}%
+  \DTLforeach*{acrdb}{\theAcr=acronym,\theDesc=description}
+  {%
+    \theAcr\dotfill\theDesc\\
+  }%
+}
+
+\begin{latin}
+\begin{acronyms}
+
+\acronym{ACK}{Acknowledge}
+\acronym{ADR}{Adaptive Data Rate}
+\acronym{bps}{bits per second}
+\acronym{BW}{Bandwidth}
+\acronym{CF}{Carrier Frequency}
+\acronym{CR}{Code Rate}
+\acronym{CSS}{Chirp Spread Spectrum}
+\acronym{DER}{Data Extraction Rate}
+\acronym{FEC}{Forward Error Correction}
+\acronym{IoT}{Internet of Things}
+\acronym{JS}{Join Server}
+\acronym{LoRa}{Long Range}
+\acronym{LoRaWAN}{Long Range Wide Area Network}
+\acronym{MAC}{Medium Access Control}
+\acronym{LPWAN}{Low Power Wide Area Network}
+\acronym{NB-IoT}{Narrow band Internet of Things}
+\acronym{NS}{Network Server}
+\acronym{PDR}{Packet Delivery Ratio}
+\acronym{PER}{Packet Error Ratio}
+\acronym{PLR}{Packet Loss Ratio}
+\acronym{RF}{Radio Frequency}
+\acronym{RW}{Receive Window}
+\acronym{SF}{Spreading Factor}
+\acronym{SNR}{Signal to Noise Ratio}
+\acronym{ToA}{Time on Air}
+\acronym{TDC}{Transmission Duty Cycle}
+\acronym{ABP}{Activation by Personalization}
+\acronym{TP}{Transmission Power}
+\acronym{UL}{Uplink}
+\acronym{DL}{Downlink}
+\acronym{OTAA}{Over-the-Air Activation}
+
+\end{acronyms}
+\end{latin}

@@ -15,6 +15,7 @@
 \usepackage{tocloft}
 \usepackage{multirow}
 \usepackage{tabularx}
+\usepackage{datatool}
 \usepackage{booktabs}
 %با فعال کردن بسته زیر فوت‌نوت‌ها در هر صفحه ریست می‌شوند. حالت پیش‌فرض آن ریست شدن در هر فصل می‌باشد.
 %\usepackage[perpage]{footmisc}
@@ -257,14 +258,6 @@
   \fancyfoot[C]{\thepage}
   \renewcommand{\headrulewidth}{1.2pt}
 }
-
-\fancypagestyle{style9}{
-  \fancyhf{}
-  \fancyhead[R]{واژه‌نامه‌ی فارسی به انگلیسی}
-  \fancyfoot[C]{\thepage}
-  \renewcommand{\headrulewidth}{1.2pt}
-}
-%
 
 %دستور حذف نام لیست تصاویر و لیست جداول از فهرست مطالب
 \newcommand*{\BeginNoToc}{%
