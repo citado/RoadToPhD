@@ -42,7 +42,6 @@
   \crefname{example}{مثال}{examples}%
   \crefname{remark}{نکته}{remarks}%
   \crefname{note}{یادداشت}{notes}%
-  \setlength{\headheight}{13pt}
 }
 % چنانچه قصد پرینت گرفتن نوشته خود را دارید، خط بالا را غیرفعال و  از دستور زیر استفاده کنید چون در صورت استفاده از دستور زیر‌‌،
 % لینک‌ها به رنگ سیاه ظاهر خواهند شد که برای پرینت گرفتن، مناسب‌تر است
@@ -194,6 +193,8 @@
 
 \pagestyle{fancy}
 \renewcommand{\chaptermark}[1]{\markboth{\chaptername~\tartibi{chapter}: #1}{}}
+
+\setlength{\headheight}{13pt}
 
 \fancypagestyle{main}{%
   \fancyhf{}
