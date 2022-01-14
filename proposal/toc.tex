@@ -1,19 +1,16 @@
-\cleardoublepage
-\thispagestyle{table-of-contents}
+\pagestyle{plain}
 \tableofcontents
-\cleardoublepage
+\newpage
 
-%اگر لیست تصاویر و لیست جداول ندارید ، کدهای زیر را با گذاشتن % در ابتدای آنها، غیرفعال کنید.
 \BeginNoToc
-\addtocontents{lof}{\lofheading}% add heading to the first page in LoF
-\thispagestyle{list-of-figures}
-\listoffigures
-\cleardoublepage
+% add heading to the table of contents for LoF
+\addtocontents{lof}{\lofheading}
+\listoffigures{}
+\newpage
 
-\addtocontents{lot}{\lotheading}% add heading to the first page in LoT
-\thispagestyle{list-of-tables}
-\listoftables
-\cleardoublepage
+% add heading to the table of conents for LoT
+\addtocontents{lot}{\lotheading}
+\listoftables{}
 
 \setcounter{savepage}{\arabic{page}}
 \mainmatter
