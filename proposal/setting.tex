@@ -165,25 +165,26 @@
  \else\raggedright%
  \fi}
 \def\@makechapterhead#1{%
-\thispagestyle{main}
-\vspace*{20\p@}%
-{\parindent \z@ \mycustomraggedright %\@mycustomfont
-\ifnum \c@secnumdepth >\m@ne
-\if@mainmatter
+  \thispagestyle{plain}
 
-\bfseries{\Huge \@chapapp}\small\space {\chapternumber\thechapter}
-\par\nobreak
-\vskip 0\p@
-\fi
-\fi
-\interlinepenalty\@M
-\Huge \bfseries #1\par\nobreak
-\vskip 120\p@
+  \vspace*{20\p@}%
+  {
+    \parindent \z@ \mycustomraggedright %\@mycustomfont
+    \ifnum \c@secnumdepth >\m@ne
+      \if@mainmatter
+        \bfseries{\Huge \@chapapp}\small\space {\chapternumber\thechapter}
+        \par\nobreak
+        \vskip 0\p@
+      \fi
+    \fi
+    \interlinepenalty\@M
+    \Huge \bfseries #1\par\nobreak
+    \vskip 120\p@
+  }
 
+  %\thispagestyle{empty}
+  \newpage
 }
-
-%\thispagestyle{empty}
-\newpage}
 \bidi@patchcmd{\@makechapterhead}{\thechapter}{\tartibi{chapter}}{}{}
 \bidi@patchcmd{\chaptermark}{\thechapter}{\tartibi{chapter}}{}{}
 \makeatother
