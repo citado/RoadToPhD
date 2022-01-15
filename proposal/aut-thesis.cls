@@ -274,10 +274,26 @@
 \bfseries
 \fontsize{16pt}{17pt}\selectfont\@latinfaculty\space
 \vskip 5mm
- \if@mscthesis
-MSc Thesis\par
-\else
-Ph.D Thesis\par
+\if@bscthesis
+  \if@proposal
+    B.Sc. Thesis Proposal\par
+  \else
+    B.Sc. Thesis\par
+  \fi
+\fi
+\if@mscthesis
+  \if@proposal
+    M.Sc. Thesis Proposal\par
+  \else
+    M.Sc. Thesis\par
+  \fi
+\fi
+\if@phdthesis
+  \if@proposal
+    Ph.D. Thesis Proposal\par
+  \else
+    Ph.D. Thesis\par
+  \fi
 \fi\par
 \vspace*{2cm}
 %{\fontsize{16pt}{17pt}\selectfont\bfseries Title}%\@latinsubject
