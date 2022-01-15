@@ -1,19 +1,14 @@
 \pagestyle{plain}
+% add heading to the first page in ToC
+\addtocontents{toc}{\tocheading}
 \tableofcontents
-\newpage
+\clearpage
 
-\BeginNoToc
-% add heading to the table of contents for LoF
+% add heading to the first page in LoF
 \addtocontents{lof}{\lofheading}
 \listoffigures{}
-\newpage
+\clearpage
 
-% add heading to the table of conents for LoT
+% add heading to the first page in LoT
 \addtocontents{lot}{\lotheading}
 \listoftables{}
-
-\setcounter{savepage}{\arabic{page}}
-\mainmatter
-% add heading to the first page in ToC, after frontmatter entries
-\addtocontents{toc}{\tocheading}
-\EndNoToc
