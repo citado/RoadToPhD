@@ -45,7 +45,7 @@
 % بسته‌ لازم برای تنظیم سربرگ‌ها
 \usepackage{fancyhdr}
 % بسته‌ای برای ظاهر شدن «مراجع»  در فهرست مطالب
-\usepackage[nottoc]{tocbibind}
+\usepackage[nottoc,notlof,notlot]{tocbibind}
 % دستورات مربوط به ایجاد نمایه
 \usepackage{makeidx,multicol}
 \setlength{\columnsep}{1.5cm}
@@ -102,6 +102,7 @@
 % دستوری برای تغییر نام کلمه «کتاب‌نامه» به «منابع و مراجع«
 \renewcommand{\bibname}{منابع و مراجع}
 
+\tocloftpagestyle{plain}
 
 % Headings for every page of ToC, LoF and Lot
 \setlength{\cftbeforetoctitleskip}{-1.2em}
@@ -122,6 +123,7 @@
 \newcommand\lotheading{\hspace*{.5cm}\tablename\hfill صفحه \par}
 
 \renewcommand{\cftchapleader}{\cftdotfill{\cftdotsep}}
+
 \renewcommand{\cfttoctitlefont}{\hspace*{\fill}\LARGE\bfseries}%\Large
 \renewcommand{\cftaftertoctitle}{\hspace*{\fill}}
 \renewcommand{\cftlottitlefont}{\hspace*{\fill}\LARGE\bfseries}%\Large
@@ -201,12 +203,6 @@
   \renewcommand{\headrulewidth}{1.2pt}
 }
 
-\fancypagestyle{version}{
-  \fancyhf{}
-  \fancyfoot[C]{\thepage}
-  \renewcommand{\headrulewidth}{0pt}
-}
-
 \fancypagestyle{abstract}{
   \fancyhf{}
   \fancyhead[R]{چکیده}
@@ -217,27 +213,6 @@
 \fancypagestyle{style3}{%
   \fancyhf{}%
   \fancyhead[R]{فهرست نمادها}
-  \fancyfoot[C]{\thepage}
-  \renewcommand{\headrulewidth}{1.2pt}
-}
-
-\fancypagestyle{list-of-tables}{%
-  \fancyhf{}
-  \fancyhead[R]{فهرست جداول}
-  \fancyfoot[C]{\thepage}
-  \renewcommand{\headrulewidth}{1.2pt}
-}
-
-\fancypagestyle{list-of-figures}{
-  \fancyhf{}
-  \fancyhead[R]{فهرست اشکال}
-  \fancyfoot[C]{\thepage}
-  \renewcommand{\headrulewidth}{1.2pt}
-}
-
-\fancypagestyle{table-of-contents}{
-  \fancyhf{}
-  \fancyhead[R]{فهرست مطالب}
   \fancyfoot[C]{\thepage}
   \renewcommand{\headrulewidth}{1.2pt}
 }
@@ -256,21 +231,5 @@
   \renewcommand{\headrulewidth}{1.2pt}
 }
 
-%دستور حذف نام لیست تصاویر و لیست جداول از فهرست مطالب
-\newcommand*{\BeginNoToc}{%
-  \addtocontents{toc}{%
-    \edef\protect\SavedTocDepth{\protect\the\protect\value{tocdepth}}%
-  }%
-  \addtocontents{toc}{%
-    \protect\setcounter{tocdepth}{-10}%
-  }%
-}
-\newcommand*{\EndNoToc}{%
-  \addtocontents{toc}{%
-    \protect\setcounter{tocdepth}{\protect\SavedTocDepth}%
-  }%
-}
-\newcounter{savepage}
 \renewcommand{\listfigurename}{فهرست اشکال}
 \renewcommand{\listtablename}{فهرست جداول}
-%\renewcommand\cftsecleader{\cftdotfill{\cftdotsep}}
