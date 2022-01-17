@@ -614,108 +614,137 @@
 در جدول \رجوع{جدول: مقایسه تکنولوژی‌های LPWAN} تکنولوژی‌های مطرح \متن‌لاتین{LPWAN} در معیارهای مختلف مقایسه شده‌اند.
 
 \begin{table}
-\caption{مقایسه تکنولوژی‌های \متن‌لاتین{LPWAN} \مرجع{SanchezIborra2016} \مرجع{Mekki2019} \مرجع{Naik2018}}
+\caption{مقایسه تکنولوژی‌های \متن‌لاتین{LPWAN} در باند فرکانسی اروپا \مرجع{SanchezIborra2016} \مرجع{Mekki2019} \مرجع{Naik2018}}
 \label{جدول: مقایسه تکنولوژی‌های LPWAN}
 \begin{latin}\begin{tabularx}
   {\textwidth}
   {|*{6}{X|}}
   \toprule
+
   &
   LoRaWAN &
   Sigfox &
   NB-IoT &
   Ingenu &
   Telensa \\
+
   \midrule
+
   Band &
-  433/868/ 780/915 MHz &
-  868/915 MHz &
+  433/868 &
+  868 &
   Cellular &
   2.4 GHz &
   868/915 MHz \\
+
   \midrule
+
   Data Rate &
-  50 kbps &
+  50 (FSK) 0.3--37.5 (LoRa) kbps &
   100 bps &
   200 kbps &
   19 kbps &
   346 Mbps \\
+
   \midrule
+
   Range &
   5 km &
   10 km &
   35 km &
   15 km &
   1 km \\
+
   \midrule
+
   Number of Channels &
-  6 &
-  333 &
+  8 &
+  360 &
   --- &
   --- &
   --- \\
+
   \midrule
+
   MAC &
   ALOHA &
   none &
   Non-Access Stratum &
   --- &
   --- \\
+
   \midrule
+
   Topology &
   Star-of-Stars &
   Star &
   Star &
   Star / Tree &
   Star / Tree \\
+
   \midrule
+
   Adaptive Data Rate &
   Yes &
   No &
   Yes &
   --- &
   --- \\
+
   \midrule
+
   Payload Length &
   256 B &
   12 B &
   1600 B &
   10 kB &
   65 kB \\
+
   \midrule
+
   Handover &
   No &
   No &
   Yes &
   --- &
   --- \\
+
   \midrule
+
   Authentication / Encryption &
   AES 128 &
   No &
   LTE Encryption &
   --- &
   --- \\
+
   \midrule
+
   Over the air update &
   --- &
   --- &
   --- &
   --- &
   --- \\
+
   \midrule
+
   Battery life &
   10Y+ &
   10Y+ &
   --- &
   --- &
   10Y+ \\
+
+  \midrule
+
   Bi-Directional &
   Yes &
   Yes &
   Yes &
   Yes &
   Yes \\
+
   \bottomrule
 \end{tabularx}\end{latin}
 \end{table}
