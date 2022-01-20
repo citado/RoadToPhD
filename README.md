@@ -25,6 +25,7 @@ Ph.D. proposal on the end to end performance evaluation of LoRa/LoRaWAN network 
 | Dr. Rasti Meeting               | 2021-11-16 |
 | Dr. Rasti Meeting               | 2022-01-03 |
 | Dr. Rasti / Dr. Bakhshi Meeting | 2022-01-15 |
+| Dr. Rasti Meeting               | 2022-01-19 |
 
 ## Latex 📜
 
