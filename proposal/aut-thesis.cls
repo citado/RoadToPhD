@@ -31,7 +31,6 @@
 \def\surname#1{\gdef\lname{#1}}
 \def\fatitle#1{\gdef\ftitle{#1}}
 \def\keywords#1{\gdef\fkeywords{\noindent #1}}
-\def\fa-abstract#1{\gdef\ffa-abstract{#1}}
 \def\faculty#1{\gdef\@faculty{#1}}
 \def\subject#1{\gdef\fsubject{#1}}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -48,7 +47,6 @@
 \def\secondlatinadvisor#1{\gdef\@secondlatinadvisor{#1}}
 \def\latinname#1{\gdef\@latinname{#1}}
 \def\latinsurname#1{\gdef\@latinsurname{#1}}
-\def\en-abstract#1{\gdef\een-abstract{#1}}
 \def\latinkeywords#1{\gdef\elatinkeywords{#1}}
 \def\latinuniversity#1{\gdef\@latinuniversity{#1}}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -207,25 +205,6 @@
 \newpage
 }
 
-\def\abstractpage{\newpage
-\thispagestyle{empty}
-\vskip 15mm
-\par
-\begin{abstract}}
-\def\endabstractpage{\end{abstract}
-\newpage
-}
-
-\def\latinabstract{\newpage
-\thispagestyle{empty}
-\vskip 15mm
-\begin{center}{\fontsize{16pt}{17pt}\selectfont\bfseries \@latintitle \\[5mm]}
-{\bfseries Abstract}
-\end{center}
-\vspace{5mm}}
-
-\def\endlatinabstract{\newpage}
-
 \def\acknowledgementpage{
   \newpage
   \thispagestyle{empty}
@@ -250,10 +229,6 @@
     }
   \end{flushleft}
 }
-
-\def\abstract{\subsection*{\abstractname}\small
-\@normalsize}
-\def\endabstract{\par}
 
 \font\titlefont=cmssbx10 scaled 2074
 \font\supervisorfont=cmbxti10
