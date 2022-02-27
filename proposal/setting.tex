@@ -1,10 +1,5 @@
-% در این فایل، دستورها و تنظیمات مورد نیاز، آورده شده است.
-%-------------------------------------------------------------------------------------------------------------------
-% در ورژن جدید زی‌پرشین برای تایپ متن‌های ریاضی، این سه بسته، حتماً باید فراخوانی شود.
 \usepackage{amsthm,amssymb,amsmath,amsfonts}
-% بسته‌ای برای تنطیم حاشیه‌های بالا، پایین، چپ و راست صفحه
 \usepackage[top=30mm, bottom=30mm, left=25mm, right=30mm]{geometry}
-% بسته‌‌ای برای ظاهر شدن شکل‌ها و تصاویر متن
 \usepackage{graphicx}
 \usepackage{color}
 \usepackage{titleps}
@@ -15,58 +10,28 @@
 \usepackage{datatool}
 \usepackage{booktabs}
 \usepackage{enumitem}
-%\usepackage{titlesec}
-% بسته‌ و دستوراتی برای ایجاد لینک‌های رنگی با امکان جهش
 \usepackage[pagebackref=false,colorlinks,linkcolor=blue,citecolor=red]{hyperref}
 \usepackage[nameinlink]{cleveref}%capitalize,,noabbrev
 
-\AtBeginDocument{%
-  \crefname{equation}{برابری}{equations}%
-  \crefname{chapter}{فصل}{chapters}%
-  \crefname{section}{بخش}{sections}%
-  \crefname{appendix}{پیوست}{appendices}%
-  \crefname{enumi}{مورد}{items}%
-  \crefname{footnote}{زیرنویس}{footnotes}%
-  \crefname{figure}{شکل}{figures}%
-  \crefname{table}{جدول}{tables}%
-  \crefname{theorem}{قضیه}{theorems}%
-  \crefname{lemma}{لم}{lemmas}%
-  \crefname{corollary}{نتیجه}{corollaries}%
-  \crefname{proposition}{گزاره}{propositions}%
-  \crefname{definition}{تعریف}{definitions}%
-  \crefname{result}{نتیجه}{results}%
-  \crefname{example}{مثال}{examples}%
-  \crefname{remark}{نکته}{remarks}%
-  \crefname{note}{یادداشت}{notes}%
-}
-% چنانچه قصد پرینت گرفتن نوشته خود را دارید، خط بالا را غیرفعال و  از دستور زیر استفاده کنید چون در صورت استفاده از دستور زیر‌‌،
-% لینک‌ها به رنگ سیاه ظاهر خواهند شد که برای پرینت گرفتن، مناسب‌تر است
-%\usepackage[pagebackref=false]{hyperref}
-% بسته‌ لازم برای تنظیم سربرگ‌ها
 \usepackage{fancyhdr}
-% بسته‌ای برای ظاهر شدن «مراجع»  در فهرست مطالب
 \usepackage[nottoc,notlof,notlot]{tocbibind}
-% دستورات مربوط به ایجاد نمایه
 \usepackage{makeidx,multicol}
 \setlength{\columnsep}{1.5cm}
 % rotating tables and figures
 \usepackage{rotating}
-%\usepackage{tensor}
 \usepackage[all]{xy}
 \usepackage{tikz}
 \usetikzlibrary{arrows}
-%%%%%%%%%%%%%%%%%%%%%%%%%%
 \usepackage{verbatim}
+
 \makeindex
-% \usepackage{sectsty}
-% فراخوانی بسته زی‌پرشین و تعریف قلم فارسی و انگلیسی
 \usepackage[%
   localise,%
   fontsize={11,13},%
   % perpagefootnote=on,%
 ]{xepersian}
 \SepMark{-}
-%حتماً از تک لایو 2014 استفاده کنید.
+
 \settextfont[
   Path = fonts/,
   UprightFont = *-Regular,
@@ -83,11 +48,7 @@
 
 \renewcommand{\baselinestretch}{1.5}
 \renewcommand{\labelitemi}{$\bullet$}
-%%%%%%%%%%%%%%%%%%%%%%%%%%
-%\setmathdigitfont{IRXLotus}[Scale=1.1]
-%%%%%%%%%%%%%%%%%%%%%%%%%%
-% تعریف قلم‌های فارسی اضافی برای استفاده در بعضی از قسمت‌های متن
-%\defpersianfont\nastaliq[Scale=2,Path=fonts/]{IranNastaliq}
+
 \defpersianfont\chapternumber[
   Scale=3,
   Path=fonts/,
@@ -95,28 +56,19 @@
   BoldFont = *-Bold,
   ItalicFont = *-Variable
 ]{Vazir}
-%%%%%%%%%%%%%%%%%%%%%%%%%%
-% دستوری برای تغییر نام کلمه «اثبات» به «برهان»
+
 \renewcommand\proofname{\textbf{برهان}}
 
-% دستوری برای تغییر نام کلمه «کتاب‌نامه» به «منابع و مراجع«
 \renewcommand{\bibname}{منابع و مراجع}
 
 \tocloftpagestyle{plain}
 
-% Headings for every page of ToC, LoF and Lot
 \setlength{\cftbeforetoctitleskip}{-1.2em}
 \setlength{\cftbeforelottitleskip}{-1.2em}
 \setlength{\cftbeforeloftitleskip}{-1.2em}
 \setlength{\cftaftertoctitleskip}{-1em}
 \setlength{\cftafterlottitleskip}{-1em}
 \setlength{\cftafterloftitleskip}{-1em}
-%%\makeatletter
-%%%%\renewcommand{\l@chapter}{\@dottedtocline{1}{1em\bfseries}{1em}}
-%%%%\renewcommand{\l@section}{\@dottedtocline{2}{2em}{2em}}
-%%%%\renewcommand{\l@subsection}{\@dottedtocline{3}{3em}{3em}}
-%%%%\renewcommand{\l@subsubsection}{\@dottedtocline{4}{4em}{4em}}
-%%%%\makeatother
 
 \newcommand\tocheading{\par عنوان\hfill صفحه \par}
 \newcommand\lofheading{\hspace*{.5cm}\figurename\hfill صفحه \par}
@@ -131,9 +83,6 @@
 \renewcommand{\cftloftitlefont}{\hspace*{\fill}\LARGE\bfseries}
 \renewcommand{\cftafterloftitle}{\hspace*{\fill}}
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%
-% تعریف و نحوه ظاهر شدن عنوان قضیه‌ها، تعریف‌ها، مثال‌ها و ...
-%برای شماره گذاری سه تایی قضیه ها
 \theoremstyle{definition}
 \newtheorem{definition}{تعریف}[section]
 \newtheorem{remark}[definition]{نکته}
@@ -146,32 +95,20 @@
 \newtheorem{lemma}[definition]{لم}
 \newtheorem{proposition}[definition]{گزاره}
 \newtheorem{corollary}[definition]{نتیجه}
-%%%%%%%%%%%%%%%%%%%%%%%%
-
-%%%%%%%%%%%%%%%%%%%%%%%%
-%%% برای شماره گذاری چهارتایی قضیه ها و ...
-%%\newtheorem{definition1}[subsubsection]{تعریف}
-%%\newtheorem{theorem1}[subsubsection]{قضیه}
-%%\newtheorem{lemma1}[subsubsection]{لم}
-%%\newtheorem{proposition1}[subsubsection]{گزاره}
-%%\newtheorem{corollary1}[subsubsection]{نتیجه}
-%%\newtheorem{remark1}[subsubsection]{نکته}
-%%\newtheorem{example1}[subsubsection]{مثال}
-%%\newtheorem{question1}[subsubsection]{سوال}
 
 \eqcommand{خط‌بالا}{toprule}
 \eqcommand{خط‌پایین}{bottomrule}
 \eqcommand{خط‌میان}{midrule}
 \eqcommand{چندسطری}{multirow}
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-% دستورهایی برای سفارشی کردن صفحات اول فصل‌ها
 \makeatletter
+
 \newcommand\mycustomraggedright{%
  \if@RTL\raggedleft%
  \else\raggedright%
- \fi}
+ \fi
+}
+
 \def\@makechapterhead#1{%
   \thispagestyle{plain}
 
