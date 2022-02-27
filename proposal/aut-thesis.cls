@@ -14,7 +14,7 @@
               [03/01/2022 v0.5
  Persian thesis document class in XeLaTeX for University of Amirkabir projects/theses/dissertations]
 \DeclareOption*{\PassOptionsToClass{\CurrentOption}{book}}
-\ProcessOptions
+\ProcessOptions%
 \LoadClass[a4paper,10pt]{book}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \def\department#1{\gdef\@department{#1}}
@@ -176,35 +176,6 @@
 }
 % }}}
 
-%دستوری برای لیست نمادها
-\newcommand{\symb}[2]{
-  \makebox[10cm]
-  {
-  \makebox[1cm][c]{\hfill}
-  \makebox[3cm][r]{$\displaystyle #1$}
-  \makebox[6cm][r]{#2}
-  }\newline
-}
-
-\newcommand{\exam}[2]{
-  \makebox[12cm]
-  {
-  \makebox[2cm][c]{\hfill}
-  \makebox[4cm][r]{#1} \ \  \makebox[6cm][r]{#2}
-  }\newline
-}
-% دستوری برای تعریف اختصارات
-\newcommand{\abbr}[2]{\par\bigskip\lr{#2}\dotfill\lr{#1}\par}
-%-----------------------------------------------
-
-\def\frame{\newpage
-\thispagestyle{empty}
-\begin{framed}\thispagestyle{empty}
-\def\endframe{\thispagestyle{empty}}\end{framed}
-\thispagestyle{empty}
-\newpage
-}
-
 \def\acknowledgementpage{
   \newpage
   \thispagestyle{empty}
@@ -214,7 +185,8 @@
 }
 \def\endacknowledgementpage{\newpage}
 
-\def\titlepage{\newpage\centering
+\def\titlepage{
+  \newpage\centering
   \thispagestyle{empty}
   \parindent 0pt \parskip 10pt plus 1fil minus 1fil
   \def\baselinestretch{1}\@normalsize\vbox to \vsize\bgroup\vbox to 9in\bgroup}
@@ -340,8 +312,30 @@ Advisors
 \newpage
 \if@twocolumn\hbox{}\newpage\fi\fi\fi}
 
+\AtBeginDocument{%
+  \crefname{equation}{برابری}{equations}%
+  \crefname{chapter}{فصل}{chapters}%
+  \crefname{section}{بخش}{sections}%
+  \crefname{appendix}{پیوست}{appendices}%
+  \crefname{enumi}{مورد}{items}%
+  \crefname{footnote}{زیرنویس}{footnotes}%
+  \crefname{figure}{شکل}{figures}%
+  \crefname{table}{جدول}{tables}%
+  \crefname{theorem}{قضیه}{theorems}%
+  \crefname{lemma}{لم}{lemmas}%
+  \crefname{corollary}{نتیجه}{corollaries}%
+  \crefname{proposition}{گزاره}{propositions}%
+  \crefname{definition}{تعریف}{definitions}%
+  \crefname{result}{نتیجه}{results}%
+  \crefname{example}{مثال}{examples}%
+  \crefname{remark}{نکته}{remarks}%
+  \crefname{note}{یادداشت}{notes}%
+}
+
+\setcounter{secnumdepth}{3}
+
 %%
-%% Copyright © 2015-2018
+%% Copyright © 2015-2022
 %%
 %% Distributable under the LaTeX Project Public License,
 %% version 1.3c or higher (your choice). The latest version of
