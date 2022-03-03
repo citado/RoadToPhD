@@ -1,10 +1,14 @@
 # Ph.D. Proposal
 
-LoRa Network End-to-End Performance Evaluation / Winter 2022 / Dr.Bakhshi, Dr.Rasti
+- **Topic**: LoRa Network End-to-End Performance Evaluation
+- **Start Date**: Fall 2022
+- **Under Supervision**: Dr.Bakhshi, Dr.Rasti
 
 ## Introduction 👋
 
-Ph.D. proposal on the end to end performance evaluation of LoRa/LoRaWAN network including platform, network server and applications.
+Ph.D. proposal/thesis on the end to end performance evaluation of LoRa/LoRaWAN network including platform, network server and applications.
+here we want to see different parameters and their effect on performance. some parameters tune an specific layer but create bottleneck
+in another layer.
 
 ## Literature Sources 📚
 
