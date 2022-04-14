@@ -1,3 +1,5 @@
+![GitHub Workflow Status](https://img.shields.io/github/workflow/status/citado/RoadToPhD/latex?label=latex&logo=github&style=flat-square)
+
 # Ph.D. Proposal
 
 - **Topic**: LoRa Network End-to-End Performance Evaluation
