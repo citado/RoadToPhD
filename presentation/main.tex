@@ -16,8 +16,18 @@
 \addbibresource{references.bib}
 \usepackage[localise]{xepersian}
 
-\settextfont{Vazir}
-\setlatintextfont{Roboto}
+\settextfont[
+  Path = fonts/,
+  UprightFont = *-Regular,
+  BoldFont = *-Bold,
+  ItalicFont = *-Variable
+]{Vazir}
+\setlatintextfont[
+  Path = fonts/,
+  UprightFont = *-Regular,
+  BoldFont = *-Bold,
+  ItalicFont = *-Italic
+]{Neuton}
 
 % ---------------------------------------------------------------------------------
 % Colors
