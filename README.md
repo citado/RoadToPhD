@@ -12,6 +12,14 @@ Ph.D. proposal/thesis on the end to end performance evaluation of LoRa/LoRaWAN n
 here we want to see different parameters and their effect on performance. some parameters tune an specific layer but create bottleneck
 in another layer.
 
+## How to write a proposal
+
+- Do not use different words for the same concept
+- Be specific about what you are doing, measuring, etc.
+- Do not use etcetra
+- Chapters can be read without any dependency
+- Use specific citation in each line even for other sections or chapters
+
 ## Literature Sources 📚
 
 - [Google Scholar](https://scholar.google.com/)
