@@ -16,19 +16,26 @@
 \DeclareOption*{\PassOptionsToClass{\CurrentOption}{book}}
 \ProcessOptions%
 \LoadClass[a4paper,10pt]{book}
+
+\RequirePackage{keyval}
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \def\department#1{\gdef\@department{#1}}
 \def\degree#1{\gdef\@degree{#1}}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\define@key{thesis}{firstsupervisor}[]{\gdef\ffirstsupervisor{#1}}
+\define@key{thesis}{secondsupervisor}[]{\gdef\fsecondsupervisor{#1}}
+\define@key{thesis}{firstadvisor}[]{\gdef\ffirstadvisor{#1}}
+\define@key{thesis}{secondadvisor}[]{\gdef\fsecondadvisor{#1}}
+\define@key{thesis}{internalexaminer}[]{\gdef\finternalexaminer{#1}}
+\define@key{thesis}{externalexaminer}[]{\gdef\fexternalexaminer{#1}}
+\define@key{thesis}{name}[]{\gdef\fname{#1}}
+\define@key{thesis}{surname}[]{\gdef\lname{#1}}
+\def\thesisdetails#1{{\setkeys{thesis}{#1}}}
+
 \def\thesisdate#1{\gdef\datethesis{#1}}
-\newcommand{\firstsupervisor}[1]{\def\ffirstsupervisor{#1}}
-\newcommand{\secondsupervisor}[1]{\def\fsecondsupervisor{#1}}
-\newcommand{\firstadvisor}[1]{\def\ffirstadvisor{#1}}
-\newcommand{\secondadvisor}[1]{\def\fsecondadvisor{#1}}
-\newcommand{\internalexaminer}[1]{\def\finternalexaminer{#1}}
-\newcommand{\externalexaminer}[1]{\def\fexternalexaminer{#1}}
-\def\name#1{\gdef\fname{#1}}
-\def\surname#1{\gdef\lname{#1}}
+
 \def\fatitle#1{\gdef\ftitle{#1}}
 \def\keywords#1{\gdef\fkeywords{\noindent #1}}
 \def\faculty#1{\gdef\@faculty{#1}}
@@ -125,23 +132,25 @@
 \vspace*{-0.8cm}
 {\fontsize{18pt}{19pt}\selectfont\bfseries{\fname \ \lname}}\par
 \fontsize{16pt}{17pt}\selectfont\bfseries
-{\ifx\ffirstsupervisor\undefined%
-\ifx\fsecondsupervisor\undefined%
-\else\fi
-\else
-\ifx\fsecondsupervisor\undefined%
-استاد راهنما
-\vspace*{-0.8cm}
-{\fontsize{18pt}{19pt}\selectfont\bfseries\par
-\ffirstsupervisor}
-\else
-\fontsize{16pt}{17pt}\selectfont\bfseries
-استادان راهنما
-\vspace*{-0.8cm}
-{\fontsize{18pt}{19pt}\selectfont\bfseries\par \ffirstsupervisor\space
-	 و
-	  \fsecondsupervisor}
-\fi\fi}
+{
+  \ifx\ffirstsupervisor\undefined%
+  \else
+    \ifx\fsecondsupervisor\undefined%
+      استاد راهنما
+      \vspace*{-0.8cm}
+      {\fontsize{18pt}{19pt}\selectfont\bfseries\par\ffirstsupervisor}
+    \else
+      \fontsize{16pt}{17pt}\selectfont\bfseries
+      استادان راهنما
+      \vspace*{-0.8cm}
+      {\fontsize{18pt}{19pt}\selectfont\bfseries\par
+        \ffirstsupervisor\space
+        و
+        \fsecondsupervisor
+      }
+    \fi
+  \fi
+}
 \par\fontsize{16pt}{17pt}\selectfont\bfseries
 {\ifx\ffirstadvisor\undefined%
 \ifx\fsecondadvisor\undefined%
