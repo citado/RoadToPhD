@@ -6,7 +6,7 @@
 در این مساله قصد داریم $S$ فاکتورها گسترش جهت ارسال اطلاعات توسط $n$ حسگر را در $T$ بازه‌ی زمانی مشخص کنیم.
 حسگرها در شروع هر بازه‌ی زمانی در صورتی که فاکتور گسترش به آن‌ها تخصیص پیدا کرده باشد داده‌ی جدیدی را ارسال می‌کنند.
 در صورتی که شی در یک بازه‌ی زمانی ارسالی نداشته باشد عمر اطلاعات آن یک واحد افزایش می‌یابد.
-هدف کمینه کردن عمر اطلاعات همه حسگر‌ها است.
+هدف کمینه کردن میانگین عمر اطلاعات همه حسگر‌ها است.
 
 \شروع{لوح}
 
@@ -59,6 +59,10 @@ $S$ & تعداد فاکتورهای گسترش \\
   \sum_{i = 1}^{N} p_{i, s, t} &\le 1 \quad \forall s \in \{1, \cdots, S\}, \forall t \in \{1, \cdots, T\} \label{eq:constr_subchannel_limit} \\
   \sum_{s = 1}^{S} p_{i, s, t} &\le 1 \quad \forall i \in \{1, \cdots, N\}, \forall t \in \{1, \cdots, T\} \label{eq:constr_thing_limit} \\
   -T * \sum_{s = 1}^{S} p_{i, s, t} + x_{i, t} + 1 &\le x_{i, t + 1} \quad \forall i \in \{1, \cdots, N\}, \forall t \in \{1, \cdots, T - 1\} \label{eq:constr_aoi_limit}
+\end{align}
+
+\begin{align}
+  \min \sum_{i = 1}^{N} \sum_{t = 1}^{T} x_{i, t} / T
 \end{align}
 
 
