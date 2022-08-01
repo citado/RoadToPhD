@@ -25,6 +25,8 @@ $x_{it}$ & متغیر صحیح و نامنفی که عمر اطلاعات حسگ
 
 $p_{i,s,t}$ & متغیر دودویی که مشخص می‌کند فاکتور گسترش $s$ در بازه‌ی زمانی $t$ به حسگر $i$ام تخصیص پیدا کرده است. \\
 
+$\mu_{i,t}$ & متغیر پیوسته و نامنفی که توان ارسالی شی $i$ام در بازه‌ی زمانی $t$ را نشان می‌دهد. \\
+
 \پایان{جدول}
 
 \پایان{لوح}
@@ -49,6 +51,10 @@ $T$ & تعداد بازه‌های زمانی \\
 
 $S$ & تعداد فاکتورهای گسترش \\
 
+$P_{max}$ & حداکثر توان ارسالی حسگرها \\
+
+$P_{min, s}$ & حداقل توان ارسالی حسگرها در صورت استفاده از فاکتور گسترش $s$ \\
+
 \پایان{جدول}
 
 \پایان{لوح}
@@ -58,7 +64,9 @@ $S$ & تعداد فاکتورهای گسترش \\
 \begin{align}
   \sum_{i = 1}^{N} p_{i, s, t} &\le 1 \quad \forall s \in \{1, \cdots, S\}, \forall t \in \{1, \cdots, T\} \label{eq:constr_subchannel_limit} \\
   \sum_{s = 1}^{S} p_{i, s, t} &\le 1 \quad \forall i \in \{1, \cdots, N\}, \forall t \in \{1, \cdots, T\} \label{eq:constr_thing_limit} \\
-  -T * \sum_{s = 1}^{S} p_{i, s, t} + x_{i, t} + 1 &\le x_{i, t + 1} \quad \forall i \in \{1, \cdots, N\}, \forall t \in \{1, \cdots, T - 1\} \label{eq:constr_aoi_limit}
+  -T * \sum_{s = 1}^{S} p_{i, s, t} + x_{i, t} + 1 &\le x_{i, t + 1} \quad \forall i \in \{1, \cdots, N\}, \forall t \in \{1, \cdots, T - 1\} \label{eq:constr_aoi_limit} \\
+  \mu_{i,t} &\ge P_{min, s} * p_{i, s, t} \quad \forall i \in \{1, \cdots, N\}, \forall t \in \{1, \cdots, T\}, \forall s \in \{1, \cdots, S\} \label{eq:power_range_1} \\
+  \mu_{i, t} &\le P_{max} * \sum_{s = 1}^{S} p{i, s, t} \quad \forall i \in \{1, \cdots, N\}, \forall t \in \{1, \cdots, T\} \label{eq:power_range_2}
 \end{align}
 
 \begin{align}
@@ -69,3 +77,4 @@ $S$ & تعداد فاکتورهای گسترش \\
 محدودیت \رجوع{eq:constr_subchannel_limit} بیان می‌کند هر فاکتور گسترش در هر بازه‌ی زمانی تنها به یک حسگر می‌تواند تخصیص پیدا کند.
 محدودیت \رجوع{eq:constr_thing_limit} بیان می‌کند در هر بازه‌ی زمانی حداکثر یک فاکتور گسترش می‌تواند به یک شی تخصیص پیدا می‌کند.
 محدودیت \رجوع{eq:constr_aoi_limit} بیان می‌کند مقدار عمر اطلاعات در صورت تخصیص نیافتن فاکتور گسترش به یک حسگر می‌بایست در بازه‌ی زمانی بعدی یک واحد افزایش پیدا کند.
+محدودیت‌های \رجوع{eq:power_range_1} و \رجوع{eq:power_range_2} در صورت تخصیص یافتن فاکتور گسترش حداقل توان ارسالی را مشخص می‌کنند.
