@@ -56,5 +56,12 @@ $S$ & تعداد فاکتورهای گسترش \\
 در ادامه مدل‌سازی ریاضی این مساله بیان می‌شود:
 
 \begin{align}
-  \sum_{i = 0}^{N} p_{i, s, t} &= 1 \quad \forall c \in \{1, \cdots, S\}, \forall t \in \{1, \cdots, T\}
+  \sum_{i = 1}^{N} p_{i, s, t} &\le 1 \quad \forall s \in \{1, \cdots, S\}, \forall t \in \{1, \cdots, T\} \label{eq:constr_subchannel_limit} \\
+  \sum_{s = 1}^{S} p_{i, s, t} &\le 1 \quad \forall i \in \{1, \cdots, N\}, \forall t \in \{1, \cdots, T\} \label{eq:constr_thing_limit} \\
+  -T * \sum_{s = 1}^{S} p_{i, s, t} + x_{i, t} + 1 &\le x_{i, t + 1} \quad \forall i \in \{1, \cdots, N\}, \forall t \in \{1, \cdots, T - 1\} \label{eq:constr_aoi_limit}
 \end{align}
+
+
+محدودیت \رجوع{eq:constr_subchannel_limit} بیان می‌کند هر فاکتور گسترش در هر بازه‌ی زمانی تنها به یک حسگر می‌تواند تخصیص پیدا کند.
+محدودیت \رجوع{eq:constr_thing_limit} بیان می‌کند در هر بازه‌ی زمانی حداکثر یک فاکتور گسترش می‌تواند به یک شی تخصیص پیدا می‌کند.
+محدودیت \رجوع{eq:constr_aoi_limit} بیان می‌کند مقدار عمر اطلاعات در صورت تخصیص نیافتن فاکتور گسترش به یک حسگر می‌بایست در بازه‌ی زمانی بعدی یک واحد افزایش پیدا کند.
