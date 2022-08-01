@@ -1,3 +1,6 @@
 [submodule "proposal/dict"]
 	path = proposal/dict
 	url = https://github.com/citado/dict
+[submodule "proposal/abbrevations"]
+	path = proposal/abbrevations
+	url = https://github.com/citado/abbrevations
