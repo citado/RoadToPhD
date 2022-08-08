@@ -66,7 +66,7 @@ $P_{i, s, t}$ & توان مصرفی حسگر $i$ام در بازه‌ی زمان
   \sum_{i = 1}^{N} p_{i, s, t} &\le 1 \quad \forall s \in \{1, \cdots, S\}, \forall t \in \{1, \cdots, T\} \label{eq:constr_subchannel_limit} \\
   \sum_{s = 1}^{S} p_{i, s, t} &\le 1 \quad \forall i \in \{1, \cdots, N\}, \forall t \in \{1, \cdots, T\} \label{eq:constr_thing_limit} \\
   -T * \sum_{s = 1}^{S} p_{i, s, t} + x_{i, t} + 1 &\le x_{i, t + 1} \quad \forall i \in \{1, \cdots, N\}, \forall t \in \{1, \cdots, T - 1\} \label{eq:constr_aoi_limit} \\
-  \mu_{i, t} &= \sum_{s = 1}^{S} p_{i, s, t} P_{i, s, t}  \quad \forall \forall i \in \{i, \cdots, N\}, \forall t in \{1, \cdots, T\}
+  \mu_{i, t} &= \sum_{s = 1}^{S} p_{i, s, t} P_{i, s, t}  \quad \forall \forall i \in \{i, \cdots, N\}, \forall t in \{1, \cdots, T\} \label{eq:constr_power_range}
 \end{align}
 
 \begin{align}
@@ -77,4 +77,6 @@ $P_{i, s, t}$ & توان مصرفی حسگر $i$ام در بازه‌ی زمان
 محدودیت \رجوع{eq:constr_subchannel_limit} بیان می‌کند هر فاکتور گسترش در هر بازه‌ی زمانی تنها به یک حسگر می‌تواند تخصیص پیدا کند.
 محدودیت \رجوع{eq:constr_thing_limit} بیان می‌کند در هر بازه‌ی زمانی حداکثر یک فاکتور گسترش می‌تواند به یک شی تخصیص پیدا کند.
 محدودیت \رجوع{eq:constr_aoi_limit} بیان می‌کند مقدار عمر اطلاعات در صورت تخصیص نیافتن فاکتور گسترش به یک حسگر می‌بایست در بازه‌ی زمانی بعدی یک واحد افزایش پیدا کند.
-محدودیت‌های \رجوع{eq:power_range_1} و \رجوع{eq:power_range_2} در صورت تخصیص یافتن فاکتور گسترش حداقل توان ارسالی را بر پایه فاکتور گسترش تخصیص یافته مشخص می‌کنند.
+اشیا می‌توانند از فاکتورهای گسترش متفاوتی استفاده کنند اما همانطور که بیان شد در فاکتورهای گسترش بالاتر نرخ ارسال کاهش پیدا کرده اما توان مصرفی کاهش پیدا می‌کند این در حالی است که
+در فاکتورهای گسترش پایین نرخ ارسال بیشتری وجود داشته و توان مصرفی بالاتر خواهد بود. محدودیت \رجوع{eq:constr_power_range} ارتباط میان توان مصرفی و فاکتور گسترش را در فاصله‌ی
+معین شده در آن بازه‌ی زمانی برای حسگر، مشخص می‌کند.
