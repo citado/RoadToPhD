@@ -28,6 +28,8 @@ $x_{it}$ & متغیر صحیح و نامنفی که عمر اطلاعات حسگ
 
 $p_{i,s,t}$ & متغیر دودویی که مشخص می‌کند فاکتور گسترش $s$ در بازه‌ی زمانی $t$ به حسگر $i$ام تخصیص پیدا کرده است. \\
 
+$\mu{i,t}$ & توان مصرفی حسگر $i$ام در بازه‌ی زمانی $t$ \\
+
 \پایان{جدول}
 
 \پایان{لوح}
@@ -52,7 +54,7 @@ $T$ & تعداد بازه‌های زمانی \\
 
 $S$ & تعداد فاکتورهای گسترش \\
 
-$SP_{i, t}$ & حداقل فاکتور گسترش مورد نیاز برای شی $i$ در بازه‌ی زمانی $t$ام \\
+$P_{i, s, t}$ & توان مصرفی حسگر $i$ام در بازه‌ی زمانی $t$ در صورتی که از فاکتور گسترش $s$ استفاده کند \\
 
 \پایان{جدول}
 
@@ -64,7 +66,7 @@ $SP_{i, t}$ & حداقل فاکتور گسترش مورد نیاز برای شی
   \sum_{i = 1}^{N} p_{i, s, t} &\le 1 \quad \forall s \in \{1, \cdots, S\}, \forall t \in \{1, \cdots, T\} \label{eq:constr_subchannel_limit} \\
   \sum_{s = 1}^{S} p_{i, s, t} &\le 1 \quad \forall i \in \{1, \cdots, N\}, \forall t \in \{1, \cdots, T\} \label{eq:constr_thing_limit} \\
   -T * \sum_{s = 1}^{S} p_{i, s, t} + x_{i, t} + 1 &\le x_{i, t + 1} \quad \forall i \in \{1, \cdots, N\}, \forall t \in \{1, \cdots, T - 1\} \label{eq:constr_aoi_limit} \\
-  p_{i, s, t} &= 0  \quad \forall s < SP_{i, t},  \forall i \in \{i, \cdots, N\}, \forall t in \{1, \cdots, T\}
+  \mu_{i, t} &= \sum_{s = 1}^{S} p_{i, s, t} P_{i, s, t}  \quad \forall \forall i \in \{i, \cdots, N\}, \forall t in \{1, \cdots, T\}
 \end{align}
 
 \begin{align}
