@@ -3,7 +3,7 @@
 
 \قسمت{بیان مساله}
 
-در این مساله قصد داریم $S$ فاکتور گسترش جهت ارسال اطلاعات توسط $n$ حسگر را در $T$ بازه‌ی زمانی به اندازه $\tau$ تخصیص دهیم.
+در این مساله قصد داریم $S$ فاکتور گسترش جهت ارسال اطلاعات توسط $n$ حسگر را در $T$ بازه‌ی زمانی با اندازه $\tau$ تخصیص دهیم.
 حسگرها در شروع هر بازه‌ی زمانی در صورتی که فاکتور گسترش به آن‌ها تخصیص پیدا کرده باشد، داده‌ی جدیدی را ارسال می‌کنند.
 در صورتی که شی در یک بازه‌ی زمانی ارسالی نداشته باشد عمر اطلاعات آن یک واحد افزایش می‌یابد.
 این اشیا جابجا می‌شوند و مکان آن‌ها در هر بازه‌ی زمانی متفاوت است اما این مکان از پیش مشخص شده است.
@@ -83,7 +83,7 @@ $\zeta$ & عمر اطلاعات قابل تحمل برای شی $i$ام \\
   -T * \sum_{s = 1}^{S} p_{i, s, t} + x_{i, t} + 1 &\le x_{i, t + 1} \quad \forall i \in \{1, \cdots, N\}, \forall t \in \{1, \cdots, T - 1\} \label{eq:constr_aoi_limit} \\
   \mu_{i, t} &= \sum_{s = 1}^{S} p_{i, s, t} P_{i, s, t}  \quad \forall i \in \{i, \cdots, N\}, \forall t \in \{1, \cdots, T\} \label{eq:constr_power_range} \\
   SF_{i, t} &= \sum_{s = 1}^{S} s p_{i, s, t} \quad \forall i \in \{i, \cdots, N\}, \forall t \in \{1, \cdots, T\} \label{eq:constr_set_sp} \\
-  N^{payload}_{i, t} &= 8 + \max\left[ ceil \left( \frac{8 PL_{i} 28 + 16}{4 SF_{i, t}} \right) \times (CR + 4), 0 \right]
+  N^{payload}_{i, t} &= 8 + \max\left[ ceil \left( \frac{8 PL_{i} - 4 SF_{i,t} + 28 + 16}{4 SF_{i, t}} \right) \times (CR + 4), 0 \right]
                        \quad \forall i \in \{i, \cdots, N\}, \forall t \in \{1, \cdots, T\}
                        \label{eq:constr_payload} \\
   N^{payload}_{i, t} \times \frac{2^{SP_{i, t}}}{BW} &\le \tau \quad \forall i \in \{i, \cdots, N\}, \forall t \in \{1, \cdots, T\}
