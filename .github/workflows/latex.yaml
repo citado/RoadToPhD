@@ -19,7 +19,7 @@ jobs:
         with:
           submodules: true
       - name: compile ${{ matrix.resource }} in latex
-        uses: xu-cheng/latex-action@v2
+        uses: xu-cheng/latex-action@v3
         with:
           latexmk_use_xelatex: true
           working_directory: ${{ matrix.resource }}
