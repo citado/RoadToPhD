@@ -1,6 +1,6 @@
 # Ph.D. Proposal
 
-![GitHub Workflow Status](https://img.shields.io/github/workflow/status/citado/RoadToPhD/latex?label=latex&logo=github&style=flat-square)
+![GitHub Actions Workflow Status](https://img.shields.io/github/actions/workflow/status/citado/roadtophd/latex.yaml?style=flat-square)
 
 - **Topic**: LoRa Network End-to-End Performance Evaluation
 - **Start Date**: Fall 2022
