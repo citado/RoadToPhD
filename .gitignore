@@ -313,3 +313,8 @@ TSWLatexianTemp*
 *.glstex
 
 # End of https://www.toptal.com/developers/gitignore/api/tex
+
+### Typst ###
+# Compiled Typst output (built by CI / release, not tracked).
+# Note: *.pdf above already covers proposal/main.pdf and presentation/main.pdf.
+proposal/main.pdf
