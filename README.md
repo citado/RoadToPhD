@@ -1,25 +1,25 @@
 # Ph.D. Proposal
 
-![GitHub Actions Workflow Status](https://img.shields.io/github/actions/workflow/status/citado/roadtophd/latex.yaml?style=flat-square)
+![GitHub Actions Workflow Status](https://img.shields.io/github/actions/workflow/status/citado/roadtophd/build.yaml?style=flat-square)
 
-- **Topic**: LoRa Network End-to-End Performance Evaluation
-- **Start Date**: Fall 2022
-- **Under Supervision**: Dr. Bakhshi, Dr. Rasti
+- **Topic**: Age of Information Minimization in LoRaWAN via Spreading-Factor Allocation
+- **Start Date**: Spring 2026
+- **Under Supervision**: Dr. Hamid R. Zarandi
 
 ## Introduction 👋
 
-Ph.D. proposal/thesis on Age of Information in LoRa/LoRaWAN networks
-by considering an optimization problem as a start point.
-Here we want to see different parameters and their effect on age of information.
-Some parameters tune a specific thing age of information but create bottleneck
-in another layer.
+A fresh restart of the Ph.D. proposal, under the supervision of Dr. Hamid R. Zarandi.
 
-My first topic is about end-to-end performance evaluation of LoRaWAN which
-is failed by the internal committee of CEIT.
+The proposal targets **Age of Information (AoI)** in LoRa/LoRaWAN networks, framed
+as a cross-layer optimization problem: minimizing the average (and peak) age of
+information of sensor nodes through spreading-factor allocation under duty-cycle,
+energy, and ALOHA-collision constraints. The aim is to study how different
+parameters affect age of information and where tuning one layer creates a
+bottleneck in another.
 
 ## How to write a proposal
 
-These are the tips from Prof. Rasti:
+General proposal-writing tips:
 
 - Do not use different words for the same concept
 - Be specific about what you are doing, measuring, etc.
@@ -39,28 +39,36 @@ These are the tips from Prof. Rasti:
 
 ## Meetings 🤝
 
-| Location                        |    Date    |
-| :------------------------------ | :--------: |
-| Dr. Rasti Meeting               | 2021-11-02 |
-| Dr. Rasti Meeting               | 2021-11-07 |
-| Dr. Rasti Meeting               | 2021-11-16 |
-| Dr. Rasti Meeting               | 2022-01-03 |
-| Dr. Rasti / Dr. Bakhshi Meeting | 2022-01-15 |
-| Dr. Rasti Meeting               | 2022-01-19 |
-| Dr. Rasti Meeting               | 2022-01-26 |
-| Dr. Rasti / Dr. Bakhshi Meeting | 2022-02-12 |
-| Dr. Rasti Meeting               | 2022-02-22 |
-| Dr. Rasti Meeting               | 2022-04-10 |
-| Internal Defense Session        | 2022-06-01 |
+| Location            |    Date    |
+| :------------------ | :--------: |
+|                     |            |
 
-## Latex 📜
+## Build 📜
 
-Both proposal and the presentation written in latex with [XePersian](https://github.com/persiantex/xepersian)
-which is great library to write Persian in latex.
+The proposal is written in [Typst](https://typst.app/) (RTL Persian), while the
+presentation is still written in latex with [XePersian](https://github.com/persiantex/xepersian).
 
-### Requirements
+### Proposal (Typst)
 
-The following packages are required to build the proposal:
+The proposal uses the local fonts checked into `proposal/fonts` (Vazir for the
+Persian body, Neuton for Latin text), so no system fonts are required.
+
+Requirements:
+
+- [Typst](https://github.com/typst/typst) `0.14.2` or newer.
+
+Compile from the repository root with:
+
+```bash
+typst compile \
+  --root . \
+  --font-path proposal/fonts \
+  proposal/main.typ proposal/main.pdf
+```
+
+### Presentation (Latex)
+
+The presentation is built with XePersian. The following packages are required:
 
 ```bash
 tlmgr install koma-script titlesec tocloft multirow enumitem \
