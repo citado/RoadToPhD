@@ -1,9 +1,10 @@
-#set page(paper: "a4", margin: (x: 1.8cm, y: 1.6cm))
+#set page(paper: "a4", margin: (x: 1.75cm, y: 1.45cm))
 #set text(font: "Neuton", size: 10pt, lang: "en")
-#set par(justify: true, leading: 0.56em)
+#set par(justify: true, leading: 0.48em)
 #set math.equation(numbering: "(1)")
 #show heading: set text(weight: "bold", size: 10.5pt)
-#show heading: set block(above: 0.85em, below: 0.45em)
+#show heading: set block(above: 0.68em, below: 0.36em)
+#show math.equation.where(block: true): set block(spacing: 0.62em)
 
 #align(center)[
   #text(size: 14pt, weight: "bold")[Problem Description and Formulation]
@@ -18,7 +19,9 @@
 
 == System model
 
-A serverless application is a workflow DAG $G = (cal(V), cal(E))$ of $N = |cal(V)|$ functions; edge $(i,j) in cal(E)$ passes payload $b_(i j)$. The platform is a heterogeneous *edge/fog cluster* of $M$ resource-constrained, *fault-prone* nodes; node $m$ has capacity $C_m$ and a preemption/failure process of rate $psi_m$ (Poisson). Each function invocation runs in one of $L$ resource tiers $cal(R) = {r_1, dots, r_L}$ (vCPU/memory), with speed $s_l$, footprint $u_l$, and price $pi_l$. Workflow invocations arrive as a Poisson process of rate $Lambda$; the end-to-end *SLO* is a deadline $D$ that may be violated with probability at most $epsilon$.
+*The thesis is to synthesize a dependable workflow service on an undependable cluster.* Nodes fail, are preempted, or drop offline, so the hardware offers no robustness — reliability and timeliness must be manufactured by the *scheduler*: where each function is placed, how it is sized, how often it is replicated, and which instances are kept warm. This is the classic dependable-systems pattern — a reliable service on unreliable components — recast for serverless edge computing.
+
+Formally, a serverless application is a workflow DAG $G = (cal(V), cal(E))$ of $N = |cal(V)|$ functions; edge $(i,j) in cal(E)$ passes payload $b_(i j)$. The platform is a heterogeneous *edge/fog cluster* of $M$ resource-constrained, *fault-prone* nodes; node $m$ has capacity $C_m$ and a preemption/failure process of rate $psi_m$ (Poisson). Each function invocation runs in one of $L$ resource tiers $cal(R) = {r_1, dots, r_L}$ (vCPU/memory), with speed $s_l$, footprint $u_l$, and price $pi_l$. Workflow invocations arrive as a Poisson process of rate $Lambda$; the end-to-end *SLO* is a deadline $D$ that may be violated with probability at most $epsilon$.
 
 == Decision variables
 
@@ -50,4 +53,4 @@ $ w_(i m) <= x_(i m), wide x_(i m), y_(i l), w_(i m) in {0,1}, wide z_i in {0,do
 
 == Why it is hard, and where the contribution lives
 
-The binary placement/tier/keep-warm variables, the integer hedging, the *product* form of $R$, and the *tail* SLO over a stochastic critical path make this a *non-convex MINLP with an interior optimum*: a bigger tier or more hedging cuts latency and raises reliability but multiplies cost; keep-warm removes cold starts yet pays a continuous idle premium; cheap edge nodes are flaky while reliable nodes are scarce and contended. The thesis targets (i) cost-minimal placement/sizing/keep-warm via a *convex relaxation + randomized rounding with a provable approximation ratio*; (ii) an *online* autoscaling-and-keep-warm policy under non-stationary, stochastic invocation arrivals solved by *Lyapunov drift-plus-penalty* with an $[O(1\/V), O(V)]$ cost–SLO trade-off; and (iii) the *chance-constrained* tail-latency SLO with cold starts and node preemptions modeled as a *Markov-modulated / stochastic-hybrid* process. The edge/fault-prone setting anchors the dependability angle (node failures, redundancy) to a computer-architecture supervisor's lens.
+The binary placement/tier/keep-warm variables, the integer hedging, the *product* form of $R$, and the *tail* SLO over a stochastic critical path make this a *non-convex MINLP with an interior optimum*: a bigger tier or more hedging cuts latency and raises reliability but multiplies cost; keep-warm removes cold starts yet pays a continuous idle premium; cheap edge nodes are flaky while reliable nodes are scarce and contended. The thesis targets (i) cost-minimal placement/sizing/keep-warm via *convex relaxation + randomized rounding with a provable approximation ratio*; (ii) an *online* autoscaling policy under stochastic arrivals via *Lyapunov drift-plus-penalty* with an $[O(1\/V), O(V)]$ cost–SLO trade-off; and (iii) a *chance-constrained* tail SLO with cold starts and preemptions as a *Markov-modulated* process.
